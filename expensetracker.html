@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="expencetracker.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>EXPENSE TRACKER</h1>
+        <form id="expenseform">
+            <input type="text" placeholder="Expense Description" id="Description" required>
+            <select id="dropdown" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="number" placeholder="Amount" id="Amount" required>
+            <input type="submit" value="Add Expense">
+        </form>
+        <h1>EXPENSE SUMMARY</h1>
+        <table id="expenseTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody id="expenselist">
+            </tbody>
+         </table>
+         <button id="calculateTotal">Calculate Total Amount</button>
+         <div id="totalAmount">Total Amount: &#8377;0</div>         
+    </div>
+
+    <script src="expensetracker.js">     
+    </script>
+</body>
+</html>
